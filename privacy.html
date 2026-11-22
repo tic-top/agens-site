@@ -40,7 +40,7 @@ hr{border:0;border-top:1px solid #dfe3e8;margin:40px 0}
 <h2>只留在手机上的</h2>
 <ul>
 <li>设置、已连接电脑的列表、SSH 登录信息、中转的登录凭证。登录信息和凭证保存在设备的钥匙串中。</li>
-<li>语音听写的录音会发送到豆包（字节跳动）的语音识别服务转成文字。为此 App 会向豆包登记一个匿名设备号，不含你的账号信息。豆包不可用时改在设备上识别。录音本身只保存在这台手机的听写历史里。</li>
+<li>App Store 版的听写、CarPlay 语音和语音对话都用 Apple 的设备端语音识别，录音不会离开手机。TestFlight 测试版的听写会把录音发送到豆包（字节跳动）的语音识别服务转成文字，为此 App 会向豆包登记一个匿名设备号，不含你的账号信息；豆包不可用时改在设备上识别。录音本身只保存在这台手机的听写历史里。</li>
 <li>卡顿记录和系统性能报告只写在 App 自己的目录里，不会自动发出。只有你自己选择分享时才会离开手机。</li>
 <li>通知和实时活动由手机自己生成。</li>
 </ul>
@@ -81,7 +81,7 @@ hr{border:0;border-top:1px solid #dfe3e8;margin:40px 0}
 <h2>What stays on your phone</h2>
 <ul>
 <li>Settings, your list of computers, SSH sign-ins and the relay sign-in. Sign-ins are kept in the device's Keychain.</li>
-<li>Dictation audio is sent to the Doubao (ByteDance) speech recognition service to be turned into text. For this the app registers an anonymous device id with Doubao, which carries no account information. When Doubao is unavailable, dictation is recognized on the device. The recordings themselves stay in the dictation history on this phone.</li>
+<li>In the App Store version, dictation, CarPlay voice and voice conversations use Apple's on-device speech recognition, and recordings never leave the phone. In TestFlight beta builds, dictation audio is sent to the Doubao (ByteDance) speech recognition service to be turned into text; for this the app registers an anonymous device id with Doubao, which carries no account information, and when Doubao is unavailable, dictation is recognized on the device. The recordings themselves stay in the dictation history on this phone.</li>
 <li>Freeze logs and system performance reports are written only to the app's own folder and are never sent automatically. They leave the phone only if you choose to share them.</li>
 <li>Notifications and Live Activities are created on the phone.</li>
 </ul>
