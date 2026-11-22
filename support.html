@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agens 支持</title>
+<style>
+body{margin:0;background:#fff;color:#1b1f24;font:16px/1.65 -apple-system,"PingFang SC",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding-block:32px 64px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1{font-size:28px;line-height:1.25}h2{font-size:19px;margin-top:28px}a{color:#2f5bd3}
+code{font:14px ui-monospace,Menlo,monospace;background:#f1f3f5;border-radius:4px;padding:1px 4px;word-break:break-all}
+hr{border:0;border-top:1px solid #dfe3e8;margin:40px 0}
+@media (prefers-color-scheme:dark){body{background:#111418;color:#e7eaee}a{color:#7d9cff}code{background:#222830}hr{border-color:#2b313a}}
+</style>
+</head>
+<body>
+<main>
+<h1>Agens 支持</h1>
+<p>Agens 是你自己电脑上 Codex 的遥控器：在手机上看 Codex 任务的进度、发指令、批准操作。电脑上有 Agens 桌面版的，还能处理它整理的待办。Agens 和 OpenAI 没有关系，Codex 是 OpenAI 的开源命令行工具，装在你自己的电脑上。</p>
+<h2>开始使用</h2>
+<ol>
+<li><strong>电脑上准备好 Codex</strong>：macOS、Linux 或 Windows，装好 Codex CLI，在终端里能正常使用；另需 Node.js 20.11 或更新（用 Agens 桌面版不需要）。</li>
+<li><strong>在电脑上显示配对二维码</strong>：在终端运行 <code>npx replica-bridge@latest --pair</code>，或在 Agens 桌面版里点「帮助 › 设置移动版」。</li>
+<li><strong>在手机上配对</strong>：打开 Agens，点「继续使用 GitHub」登录，然后在「远程」页点「设置 Remote」，扫电脑上的二维码（扫不了时点「改为手动配对」输入配对码）。第一次配对时，电脑会问是否允许这台手机。</li>
+</ol>
+<p>配好以后，电脑出现在「远程」里，打开一个任务就能发指令、看输出、批准操作。</p>
+<h2>常见问题</h2>
+<ul>
+<li><strong>电脑显示离线</strong>：电脑要开着并联网。没装成后台服务的，运行 <code>npx replica-bridge</code> 的终端不能关；再运行一次同一条命令会显示状态。</li>
+<li><strong>提示需要重新配对，或配对码过期</strong>：在电脑上重新运行 <code>npx replica-bridge@latest --pair</code>，用手机再扫一次。</li>
+<li><strong>为什么要 GitHub 登录</strong>：只用来认出哪些电脑是你的。Agens 不申请任何 GitHub 权限，也读不到你的代码仓库。</li>
+<li><strong>中转服务器能看到我的内容吗</strong>：不能。手机和电脑之间的内容端到端加密，中转服务器只转发它解不开的数据。详见<a href="privacy.html">隐私政策</a>和<a href="terms.html">使用条款</a>。</li>
+<li><strong>怎么删除账号</strong>：设置 › 账户 › GitHub 账号 › 删除账号。会删除中转服务器上的账号和名下所有设备的记录。</li>
+</ul>
+<h2>联系我们</h2>
+<p>问题和建议请写信给 yilinjia@microsoft.com，写上 App 的版本号和电脑的系统。</p>
+<hr>
+<section lang="en">
+<h1>Agens Support</h1>
+<p>Agens is a remote control for Codex on your own computer: follow your Codex tasks, send instructions and approve actions from your phone. With the Agens desktop app on the computer, you can also work through its to-dos. Agens is not affiliated with OpenAI; Codex is OpenAI's open-source command-line tool, installed on your own computer.</p>
+<h2>Getting started</h2>
+<ol>
+<li><strong>Have Codex working on the computer</strong>: macOS, Linux or Windows, with the Codex CLI installed and working in a terminal, and Node.js 20.11 or later (not needed with the Agens desktop app).</li>
+<li><strong>Show the pairing QR code on the computer</strong>: run <code>npx replica-bridge@latest --pair</code> in a terminal, or choose Help › Set Up Mobile in the Agens desktop app.</li>
+<li><strong>Pair the phone</strong>: open Agens, tap Continue with GitHub to sign in, then tap Set up Remote on the Remote screen and scan the QR code on the computer (or tap Pair manually instead and type the pairing code). The first time, the computer asks you to allow the phone.</li>
+</ol>
+<p>Once paired, the computer appears in Remote: open a task to send instructions, follow the output and approve actions.</p>
+<h2>Common questions</h2>
+<ul>
+<li><strong>The computer shows offline</strong>: it has to be on and online. Without the background service, keep the terminal running <code>npx replica-bridge</code> open; running the same command again shows its status.</li>
+<li><strong>Asked to pair again, or the pairing code expired</strong>: run <code>npx replica-bridge@latest --pair</code> on the computer again and scan the new code.</li>
+<li><strong>Why GitHub sign-in</strong>: it only tells the relay which computers are yours. Agens asks for no GitHub permissions and cannot read your repositories.</li>
+<li><strong>Can the relay see my content</strong>: no. What passes between the phone and the computer is end-to-end encrypted; the relay only forwards data it cannot decrypt. See the <a href="privacy.html">privacy policy</a> and <a href="terms.html">terms of use</a>.</li>
+<li><strong>How to delete my account</strong>: Settings › Account › GitHub account › Delete account. It deletes your account and the records of all its devices on the relay.</li>
+</ul>
+<h2>Contact</h2>
+<p>Email questions and suggestions to yilinjia@microsoft.com, with the app version and your computer's OS.</p>
+</section>
+</main>
+</body>
+</html>

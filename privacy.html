@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agens 隐私政策</title>
+<style>
+body{margin:0;background:#fff;color:#1b1f24;font:16px/1.65 -apple-system,"PingFang SC",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding-block:32px 64px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1{font-size:28px;line-height:1.25}h2{font-size:19px;margin-top:28px}a{color:#2f5bd3}
+code{font:14px ui-monospace,Menlo,monospace;background:#f1f3f5;border-radius:4px;padding:1px 4px;word-break:break-all}
+hr{border:0;border-top:1px solid #dfe3e8;margin:40px 0}
+@media (prefers-color-scheme:dark){body{background:#111418;color:#e7eaee}a{color:#7d9cff}code{background:#222830}hr{border-color:#2b313a}}
+</style>
+</head>
+<body>
+<main>
+<h1>Agens 隐私政策</h1>
+<p>生效日期：2026-11-22</p>
+<p>Agens 是一个用手机查看和操作你自己电脑上的 Codex 任务和 Agens Work 任务的 App。我们不卖数据，不放广告，也不跟踪你。</p>
+<h2>我们保存什么</h2>
+<p><strong>只有通过中转连接电脑时</strong>，我们的中转服务器才会保存这些：</p>
+<ul>
+<li><strong>GitHub 账号</strong>：登录时不申请任何 GitHub 权限，只读你的 GitHub 数字 id 和用户名，读完就丢掉 GitHub 给的令牌。用来确认哪些电脑和手机属于你。</li>
+<li><strong>你的手机和电脑</strong>：每台设备的 id、公钥、你给它起的名字（比如"我的 MacBook"）、登记时间和最近在线时间，以及登录令牌的哈希（不存令牌本身）。</li>
+</ul>
+<p>中转服务器为了防止暴力登录，会在内存里按 IP 地址计数，不写入日志或数据库。</p>
+<h2>我们看不到什么</h2>
+<ul>
+<li><strong>你和电脑之间的内容</strong>：Codex 对话、命令输出、文件、任务看板，都在手机和你的电脑之间端到端加密（X25519 密钥交换，ChaCha20-Poly1305 加密）。中转服务器只转发它解不开的密文。电脑只信任扫码时交换的密钥，不信任中转服务器转交的。</li>
+<li><strong>你的 Codex 和 Agens Work 账号</strong>：它们的登录信息和密钥留在你的电脑上，手机和中转服务器都不会拿到。</li>
+</ul>
+<h2>分享的页面</h2>
+<p>电脑上的 agent 发布的网页平时只在你的手机和电脑之间端到端加密传输。只有你在 App 里点「上传并创建链接」时，那一页才会上传到中转服务器，<strong>离开端到端加密</strong>：</p>
+<ul>
+<li>中转服务器明文保存这个页面、它的标题、来自哪个网站的第几版、大小、创建和过期时间，以及是哪个账号、哪台设备分享的。</li>
+<li>有链接的人都能打开它，直到过期（1 到 30 天，由你选）或你撤销。撤销或过期后页面马上删除，只留下 id、账号、大小和时间这条记录，一个月后也删掉。</li>
+<li>页面被举报或违反使用条款时，运营方可以下架它，并停用账号的分享。删除账号时，账号的分享连记录一起删除。</li>
+</ul>
+<h2>只留在手机上的</h2>
+<ul>
+<li>设置、已连接电脑的列表、SSH 登录信息、中转的登录凭证。登录信息和凭证保存在设备的钥匙串中。</li>
+<li>语音听写的录音会发送到豆包（字节跳动）的语音识别服务转成文字。为此 App 会向豆包登记一个匿名设备号，不含你的账号信息。豆包不可用时改在设备上识别。录音本身只保存在这台手机的听写历史里。</li>
+<li>卡顿记录和系统性能报告只写在 App 自己的目录里，不会自动发出。只有你自己选择分享时才会离开手机。</li>
+<li>通知和实时活动由手机自己生成。</li>
+</ul>
+<p>如果你用 SSH 方式连电脑，App 只连接你自己添加的那台电脑，不经过我们的服务器。</p>
+<h2>第三方</h2>
+<ul>
+<li><strong>GitHub</strong>：负责登录，适用 GitHub 的隐私政策。</li>
+<li><strong>Apple</strong>：如果你在 TestFlight 里选择发送崩溃报告或反馈，或者在 iPhone 的「分析与改进」里打开了「与 App 开发者共享」，Apple 会收集崩溃报告并转给我们，适用 Apple 的隐私政策。</li>
+</ul>
+<h2>删除</h2>
+<p>在 App 里退出中转登录，这台手机的登录就会作废。在 设置 › 账户 › GitHub 账号 › 删除账号，可以随时删除中转服务器上的账号和名下所有设备的记录，也可以写信给我们代为删除。删除 App 会清除手机上的全部数据。</p>
+<h2>联系我们</h2>
+<p>yilinjia@microsoft.com</p>
+<hr>
+<section lang="en">
+<h1>Agens Privacy Policy</h1>
+<p>Effective date: 2026-11-22</p>
+<p>Agens lets you use your phone to follow and act on the Codex tasks and Agens Work tasks running on your own computer. We don't sell data, show ads, or track you.</p>
+<h2>What we keep</h2>
+<p><strong>Only when you connect a computer through the relay</strong>, our relay server keeps:</p>
+<ul>
+<li><strong>Your GitHub account</strong>: sign-in asks for no GitHub permissions. We read your numeric GitHub id and username, then discard the token GitHub gives us. We use them to know which computers and phones are yours.</li>
+<li><strong>Your phones and computers</strong>: for each device, an id, a public key, the name you gave it (for example "My MacBook"), when it was registered and last seen, and a hash of its sign-in token (not the token itself).</li>
+</ul>
+<p>To stop brute-force sign-in, the relay counts requests per IP address in memory only. IP addresses are not written to logs or the database.</p>
+<h2>What we can't see</h2>
+<ul>
+<li><strong>What passes between you and your computer</strong>: Codex conversations, command output, files and the task board are end-to-end encrypted between the phone and your computer (X25519 key exchange, ChaCha20-Poly1305). The relay only forwards ciphertext it cannot decrypt. Your computer trusts only the key exchanged when you scan its QR code, never a key handed over by the relay.</li>
+<li><strong>Your Codex and Agens Work accounts</strong>: their sign-ins and keys stay on your computer. Neither the phone nor the relay receives them.</li>
+</ul>
+<h2>Shared pages</h2>
+<p>Pages your computer's agents publish normally travel only end-to-end encrypted between your phone and your computer. Only when you tap Upload and create link in the app is that one page uploaded to the relay, <strong>leaving end-to-end encryption</strong>:</p>
+<ul>
+<li>The relay stores the page in plain text, with its title, which site and version it came from, its size, when it was created and when it expires, and which account and device shared it.</li>
+<li>Anyone with the link can open it until it expires (1 to 30 days, your choice) or you revoke it. A revoked or expired page is deleted at once; a record with its id, account, size and times is kept for one more month.</li>
+<li>If a page is reported or breaks the terms of use, the operator can take it down and stop the account's sharing. Deleting your account deletes its shares and their records.</li>
+</ul>
+<h2>What stays on your phone</h2>
+<ul>
+<li>Settings, your list of computers, SSH sign-ins and the relay sign-in. Sign-ins are kept in the device's Keychain.</li>
+<li>Dictation audio is sent to the Doubao (ByteDance) speech recognition service to be turned into text. For this the app registers an anonymous device id with Doubao, which carries no account information. When Doubao is unavailable, dictation is recognized on the device. The recordings themselves stay in the dictation history on this phone.</li>
+<li>Freeze logs and system performance reports are written only to the app's own folder and are never sent automatically. They leave the phone only if you choose to share them.</li>
+<li>Notifications and Live Activities are created on the phone.</li>
+</ul>
+<p>If you connect over SSH, the app talks only to the computer you add, not to our servers.</p>
+<h2>Third parties</h2>
+<ul>
+<li><strong>GitHub</strong> handles sign-in; GitHub's privacy policy applies.</li>
+<li><strong>Apple</strong>: if you choose to send crash reports or feedback in TestFlight, or turn on Share With App Developers in your iPhone's Analytics &amp; Improvements settings, Apple collects crash reports and passes them to us; Apple's privacy policy applies.</li>
+</ul>
+<h2>Deletion</h2>
+<p>Signing out of the relay in the app revokes that phone's sign-in. In Settings › Account › GitHub account › Delete account you can delete your account and the records of all its devices on the relay at any time, or email us to do it for you. Deleting the app removes all data on the phone.</p>
+<h2>Contact</h2>
+<p>yilinjia@microsoft.com</p>
+</section>
+</main>
+</body>
+</html>
